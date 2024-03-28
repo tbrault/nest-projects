@@ -31,4 +31,8 @@ export class TaskService {
   async remove(id: number) {
     return await this.tasksRepository.delete(id);
   }
+
+  async removeAll() {
+    return await this.tasksRepository.clear();
+  }
 }
